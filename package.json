@@ -1,0 +1,15 @@
+{
+  "name": "sparkrdating",
+  "version": "1.0.0",
+  "description": "Django based dating and networking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "SparkrDating"
+  },
+  "author": "Lefa Mofokeng (Codeylee)",
+  "license": "ISC"
+}
