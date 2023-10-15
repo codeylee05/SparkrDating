@@ -20,5 +20,5 @@ from sparkrapp import urls as sparkrapp_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("sparkrapp/", sparkrapp_urls),
+    path("sparkrapp/", include(sparkrapp_urls)),
 ]
