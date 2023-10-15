@@ -2,5 +2,38 @@
 @use "../mixins"as *;
 
 .body-index {
-    background: $theme-background
+    position: relative;
+    background: $theme-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 130px;
+    text-align: center;
+
+    .title {
+        font-size: 110px;
+        font-weight: bold
+    }
+
+    .slogan {
+        font-size: 35px;
+        font-weight: bold;
+        color: $theme-primary;
+        transform: translateY(-10px);
+    }
+
+    .prompt {
+        margin-top: 20px;
+        font-size: 26px;
+    }
+
+    .controls-index {
+        margin-top: 60px;
+
+        button {
+            margin-right: 15px;
+        }
+    }
 }

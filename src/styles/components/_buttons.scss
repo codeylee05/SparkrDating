@@ -1,2 +1,20 @@
 @use "../variables"as *;
 @use "../mixins"as *;
+
+.cta {
+    height: 47px;
+    width: 200px;
+    border-radius: 50px;
+    color: $theme-secondary;
+    font-weight: bold;
+    font-size: 23px;
+    border: none;
+    transition: ease-in-out .4s;
+
+    &:hover {
+        color: white;
+        border: solid 1px white;
+        background: $theme-background;
+        transform: scale(1.1);
+    }
+}
