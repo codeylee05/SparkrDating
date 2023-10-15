@@ -1,3 +1,4 @@
 import _ from "lodash";
+import "./styles/index.scss";
 
-console.log("Webpack ready!");
+alert("Webpack ready!");

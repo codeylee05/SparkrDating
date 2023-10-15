@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     entry: './src/index.js',
@@ -6,4 +7,26 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'sparkrapp/static/scripts'),
     },
+    module: {
+
+        rules: [
+
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader",
+                ],
+            },
+        ],
+    },
+    plugins: [
+
+        new MiniCssExtractPlugin({
+
+            filename: "../styles/main.css",
+
+        }),
+    ],
 };
