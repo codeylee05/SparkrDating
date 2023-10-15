@@ -1,2 +1,11 @@
-//@import "bootstrap";
-//@import "bootstrap-icons";
+@use "./variables"as *;
+@use "./mixins"as *;
+
+@use "./components/buttons"as *;
+@use "./components/nav"as *;
+
+@use "./pages/index"as *;
+@use "./pages/explore"as *;
+@use "./pages/account"as *;
+
+@import "bootstrap";
