@@ -1,2 +1,6 @@
 @use "../variables"as *;
 @use "../mixins"as *;
+
+.body-index {
+    background: $theme-background
+}
