@@ -6,7 +6,23 @@
 {% block content %}
 
 <body>
-    Sign in
+    <div class="message-cont">
+        {% if message %}
+        {{ message }}
+        {% endif %}
+    </div>
+    <div class="title-head">
+        Let's get you signed in and making connections!
+    </div>
+    <form action="{% url 'signin' %}" method="POST">
+        {% csrf_token %}
+        <label for="email" class="form-label email-label">Email address</label>
+        <input type="email" class="form-control input-email" id="email" aria-describedby="email-note" name="email">
+        <div id="email-note" class="form-text">We'll never share your email with anyone else.</div>
+        <label for="password" class="form-label password-label">Password</label>
+        <input type="password" class="form-control input-password" id="password" name="password">
+        <button type="submit">Sign in</button>
+    </form>
 </body>
 
 {% endblock %}
