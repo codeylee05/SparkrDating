@@ -1,0 +1,45 @@
+@use "./buttons" as *;
+@use "../variables" as *;
+
+.form-cont {
+  width: 500px;
+  height: 400px;
+  background: lightgray;
+  border-radius: 20px;
+  position: absolute;
+  top: 100px;
+  left: 410px;
+  box-shadow: 0 0 5px gray 0 0 10px black;
+  background: $theme-background;
+
+  form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      font-size: 23px;
+    }
+    input {
+      border-radius: 11px;
+    }
+
+    .controls-signup,
+    .controls-signin {
+      margin-top: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        margin-right: 10px;
+      }
+    }
+    .controls-signin {
+      margin-top: 100px;
+    }
+  }
+}

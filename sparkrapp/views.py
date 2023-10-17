@@ -19,12 +19,20 @@ def sign_up(request):
 
         if password1 == password2:
 
-            new_user = User.objects.create_user(email=email, username=email, password=password1)
-            new_user.save()
+            users = User.objects.filter(email=email, username=email)
+            if users:
 
-            return render(request, "sparkrapp/signin.html", {
-                "message": "Account created successfully"
-            })
+                 return render(request, "sparkrapp/signup.html", {
+                    "message": "This account already exists. Try signing in"
+                 })
+
+            else: 
+                new_user = User.objects.create_user(email=email, username=email, password=password1)
+                new_user.save()
+
+                return render(request, "sparkrapp/signin.html", {
+                    "message": "Account created successfully. Let's sign you in"
+                })
 
         else:
 

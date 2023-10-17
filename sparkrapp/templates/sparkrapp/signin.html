@@ -12,17 +12,21 @@
         {% endif %}
     </div>
     <div class="title-head">
-        Let's get you signed in and making connections!
+        Let's get you signed in!
     </div>
-    <form action="{% url 'signin' %}" method="POST">
-        {% csrf_token %}
-        <label for="email" class="form-label email-label">Email address</label>
-        <input type="email" class="form-control input-email" id="email" aria-describedby="email-note" name="email">
-        <div id="email-note" class="form-text">We'll never share your email with anyone else.</div>
-        <label for="password" class="form-label password-label">Password</label>
-        <input type="password" class="form-control input-password" id="password" name="password">
-        <button type="submit">Sign in</button>
-    </form>
+    <div class="form-cont signin-cont">
+        <form action="{% url 'signin' %}" method="POST">
+            {% csrf_token %}
+            <label for="email" class="form-label email-label">Email address</label>
+            <input type="email" class="form-control input-email" id="email" aria-describedby="email-note" name="email">
+            <label for="password" class="form-label password-label">Password</label>
+            <input type="password" class="form-control input-password" id="password" name="password">
+            <div class="controls-signin">
+                <button class="sign-action sa-signin" type="submit">Sign in</button>
+                <button class="clear-btn" type="reset">Clear</button>
+            </div>
+        </form>
+    </div>
 </body>
 
 {% endblock %}

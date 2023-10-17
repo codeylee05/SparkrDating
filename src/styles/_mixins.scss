@@ -1,1 +1,13 @@
-@use "./variables"as *;
+@use "./variables" as *;
+
+@mixin hoverOverBtn-1 {
+  color: white;
+  border: solid 1px white;
+  background: $theme-background;
+}
+
+@mixin hoverOverBtn-2 {
+  color: $theme-secondary;
+  border: solid 1px $theme-secondary;
+  background: white;
+}
