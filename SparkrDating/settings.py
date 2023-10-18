@@ -88,11 +88,10 @@ USE_TZ = True
 import os
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(STATIC_URL, "staticfiles")
+STATIC_ROOT = os.path.join(STATIC_URL, "static")
 
 LOGIN_URL = "signin"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Message storage configuration
 
