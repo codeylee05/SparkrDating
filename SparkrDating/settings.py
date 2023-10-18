@@ -94,5 +94,4 @@ LOGIN_URL = "signin"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Message storage configuration
 
