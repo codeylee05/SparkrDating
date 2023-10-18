@@ -1,22 +1,12 @@
 # SparkrDating
 
-Django based Dating and networking app
-
-# Category:
+Sparkr is Django based Dating and networking app
 
 Dating and Networking
 
-# Name:
-
-Sparkr
-
-# Type:
-
-Full-stack web application
-
 # Stack:
 
-HTML+SCSS, vanilla JS, Django
+HTML+SCSS, vanilla JS, Python, Django
 
 # Workflow:
 
