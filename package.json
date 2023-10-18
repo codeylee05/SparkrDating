@@ -4,12 +4,12 @@
   "description": "Django based dating and networking app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "server": "python manage.py runserver",
     "build": "webpack",
     "makemigrate": "python manage.py makemigrations",
     "migrate": "python manage.py migrate",
-    "createsuperuser": "python manage.py createsuperuser"
+    "createsuperuser": "python manage.py createsuperuser",
+    "test": "python manage.py test"
   },
   "repository": {
     "type": "git",
