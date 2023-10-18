@@ -5,7 +5,50 @@
 
 {% block content %}
 
-<body>
-    Account
+<body class="body-account">
+    <div class="title-head">
+        Account
+    </div>
+    <div class="title-head-3">Email</div>
+    <div class="detail">
+        {{ account.email }}
+    </div>
+    <div class="account-main-cont">
+        <div class="account-cont">
+            <div class="title-head-2">Details</div>
+            <div class="title-head-3">Name</div>
+            <div class="detail">
+                {{ profile.user_name }}
+            </div>
+            <div class="title-head-3">Age</div>
+            <div class="detail">
+                {{ profile.user_age }}
+            </div>
+            <div class="title-head-3">Location</div>
+            <div class="detail">
+                {{ profile.user_location }}
+            </div>
+            <div class="title-head-3">Gender</div>
+            <div class="detail">
+                {{ profile.user_gender }}
+            </div>
+            <div class="title-head-3">Preference</div>
+            <div class="detail">
+                {{ profile.user_preference }}
+            </div>
+            <div class="title-head-3">Sexuality</div>
+            <div class="detail">
+                {{ profile.get_user_sexuality_display }}
+            </div>
+            <div class="title-head-3">Bio</div>
+            <div class="detail">
+                {{ profile.user_bio }}
+            </div>
+        </div>
+        <div class="profile-cont">
+            <div class="title-head-2">Preview Profile</div>
+            <!--plug in profile container-->
+        </div>
+    </div>
 </body>
 {% endblock %}

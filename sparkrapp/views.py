@@ -78,13 +78,16 @@ def sign_in(request):
 @login_required
 def account(request, user_id):
 
-    account = User.objects.get(id=user_id)
     this_user = request.user
+
+    account = User.objects.get(id=user_id)
+    profile = Profile.objects.get(user=account)
 
     if account.id == this_user.id:
 
         return render(request, "sparkrapp/account.html", {
-            "account_user": account
+            "account": account,
+            "profile": profile
         })
 
     else: 
