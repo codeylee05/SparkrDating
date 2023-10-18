@@ -88,7 +88,7 @@ USE_TZ = True
 import os
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(STATIC_URL, "static")
+STATIC_ROOT = os.path.join(STATIC_URL, "staticfiles")
 
 LOGIN_URL = "signin"
 
