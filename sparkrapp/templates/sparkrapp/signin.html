@@ -1,0 +1,32 @@
+{% extends 'sparkrapp/base.html' %}
+{% load static %}
+
+<title>{% block title %}Sign in - Sparkr{% endblock %}</title>
+
+{% block content %}
+
+<body class="body-signin">
+    <div class="title-head">
+        Let's get you signed in!
+    </div>
+    <div class="message-cont">
+        {% if message %}
+        {{ message }}
+        {% endif %}
+    </div>
+    <div class="form-cont signin-cont">
+        <form action="{% url 'signin' %}" method="POST">
+            {% csrf_token %}
+            <label for="email" class="form-label email-label">Email address</label>
+            <input type="email" class="form-control input-email" id="email" aria-describedby="email-note" name="email">
+            <label for="password" class="form-label password-label">Password</label>
+            <input type="password" class="form-control input-password" id="password" name="password">
+            <div class="controls-signin">
+                <button class="sign-action sa-signin" type="submit">Sign in</button>
+                <button class="clear-btn" type="reset">Clear</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+{% endblock %}

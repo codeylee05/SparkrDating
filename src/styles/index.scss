@@ -1,2 +1,34 @@
-//@import "bootstrap";
-//@import "bootstrap-icons";
+@use "./variables" as *;
+@use "./mixins" as *;
+
+@use "./components/buttons" as *;
+@use "./components/nav" as *;
+@use "./components/forms" as *;
+
+@use "./pages/index" as *;
+@use "./pages/explore" as *;
+@use "./pages/account" as *;
+
+body {
+  font-size: 20px;
+
+  .title-head {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+
+.body-signup {
+  background: $theme-background;
+
+  .form-cont {
+    background: white;
+  }
+}
+
+.body-signup,
+.body-signin {
+  text-align: center;
+}
