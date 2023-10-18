@@ -1,3 +1,4 @@
+from .views_account import sign_up, sign_in
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, logout, authenticate
@@ -5,75 +6,10 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Profile
 
-existing_account = "This account already exists. Try signing in"
-non_matching_passwords = "The passwords dont match. Try again"
-non_existing_account = "This account does not exist. Try signing up"
-
-
 def index(request):
 
     return render(request, "sparkrapp/index.html")
 
-
-def sign_up(request):
-
-    if request.method == "POST":
-
-        email = request.POST["email"]
-        password1 = request.POST["password"]
-        password2 = request.POST["password2"]
-
-        if password1 == password2:
-
-            users = User.objects.filter(email=email)
-            if users:
-
-                 return render(request, "sparkrapp/signup.html", {
-                    "message": existing_account
-                 })
-
-            else: 
-                new_user = User.objects.create_user(email=email, username=email, password=password1)
-                new_user.save()
-
-                return render(request, "sparkrapp/signin.html", {
-                    "message": "Account created successfully. Let's sign you in"
-                })
-
-        else:
-
-            return render(request, "sparkrapp/signup.html", {
-                "message": nonmatching_passwords
-            })
-
-    else:
-
-        return render(request, "sparkrapp/signup.html")
-
-
-def sign_in(request):
-
-    if request.method == "POST":
-
-        email = request.POST["email"]
-        password = request.POST["password"]
-
-        user = authenticate(request, username=email, password=password)
-        if user is not None:
-
-            login(request, user)
-            '''return render(request, "sparkrapp/account.html")'''
-            return redirect("account", user_id=request.user.id)
-
-        else:
-
-            return render(request, "sparkrapp/signin.html", {
-                "message": non_existing_account
-            })
-
-    else:
-
-        return render(request, "sparkrapp/signin.html")
 
 @login_required
 def account(request, user_id):
@@ -93,4 +29,15 @@ def account(request, user_id):
     else: 
 
         return render(request, "sparkrapp/signin.html")
+
+
+@login_required
+def create_profile(request, user_id):
+
+    #if request.method == "POST":
+    #pass
+
+    #else:
+
+        return render(request, "sparkrapp/createprofile.html")
 

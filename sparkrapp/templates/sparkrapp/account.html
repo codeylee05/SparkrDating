@@ -15,7 +15,8 @@
     </div>
     <div class="account-main-cont">
         <div class="account-cont">
-            <div class="title-head-2">Details</div>
+            <div class="title-head-2">Profile Details</div>
+            {% if profile %}
             <div class="title-head-3">Name</div>
             <div class="detail">
                 {{ profile.user_name }}
@@ -44,6 +45,11 @@
             <div class="detail">
                 {{ profile.user_bio }}
             </div>
+            {% else %}
+            <div class="no-profile">
+                You have no associated Profile
+            </div>
+            {% endif %}
         </div>
         <div class="profile-cont">
             <div class="title-head-2">Preview Profile</div>
