@@ -85,16 +85,14 @@ USE_I18N = True
 USE_TZ = True
 
 
-
 import os
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(STATIC_URL, "static")
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+LOGIN_URL = "signin"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Message storage configuration
-MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 

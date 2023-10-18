@@ -5,14 +5,14 @@
 
 {% block content %}
 
-<body>
+<body class="body-signin">
+    <div class="title-head">
+        Let's get you signed in!
+    </div>
     <div class="message-cont">
         {% if message %}
         {{ message }}
         {% endif %}
-    </div>
-    <div class="title-head">
-        Let's get you signed in!
     </div>
     <div class="form-cont signin-cont">
         <form action="{% url 'signin' %}" method="POST">

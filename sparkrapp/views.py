@@ -1,8 +1,14 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Profile
+
+existing_account = "This account already exists. Try signing in"
+non_matching_passwords = "The passwords dont match. Try again"
+non_existing_account = "This account does not exist. Try signing up"
+
 
 def index(request):
 
@@ -19,11 +25,11 @@ def sign_up(request):
 
         if password1 == password2:
 
-            users = User.objects.filter(email=email, username=email)
+            users = User.objects.filter(email=email)
             if users:
 
                  return render(request, "sparkrapp/signup.html", {
-                    "message": "This account already exists. Try signing in"
+                    "message": existing_account
                  })
 
             else: 
@@ -37,7 +43,7 @@ def sign_up(request):
         else:
 
             return render(request, "sparkrapp/signup.html", {
-                "message": "Passwords do not match"
+                "message": nonmatching_passwords
             })
 
     else:
@@ -56,20 +62,32 @@ def sign_in(request):
         if user is not None:
 
             login(request, user)
-            return render(request, "sparkrapp/account.html")
+            '''return render(request, "sparkrapp/account.html")'''
+            return redirect("account", user_id=request.user.id)
 
         else:
 
             return render(request, "sparkrapp/signin.html", {
-                "message": "This account does not exist"
+                "message": non_existing_account
             })
 
     else:
 
         return render(request, "sparkrapp/signin.html")
 
+@login_required
+def account(request, user_id):
 
-def account(request):
+    account = User.objects.get(id=user_id)
+    this_user = request.user
 
-    return render(request, "sparkrapp/account.html")
+    if account.id == this_user.id:
+
+        return render(request, "sparkrapp/account.html", {
+            "account_user": account
+        })
+
+    else: 
+
+        return render(request, "sparkrapp/signin.html")
 

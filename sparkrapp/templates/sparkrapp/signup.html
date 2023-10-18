@@ -6,13 +6,13 @@
 {% block content %}
 
 <body class="body-signup">
+    <div class="title-head">
+        Sign up for a Sparkr account!
+    </div>
     <div class="message-cont">
         {% if message %}
         {{ message }}
         {% endif %}
-    </div>
-    <div class="title-head">
-        Sign up for a Sparkr account!
     </div>
     <div class="form-cont signup-cont">
         <form action="{% url 'signup' %}" method="POST">
