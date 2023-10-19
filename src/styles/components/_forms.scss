@@ -59,8 +59,14 @@
         input {
           width: 650px;
         }
-        svg {
-          transform: translateX(-38px);
+        .svg-cont {
+          svg {
+            transform: translateX(-38px);
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
         }
       }
     }
