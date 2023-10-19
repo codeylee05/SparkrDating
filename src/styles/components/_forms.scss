@@ -1,5 +1,6 @@
 @use "./buttons" as *;
 @use "../variables" as *;
+@use "../mixins" as *;
 
 .form-cont {
   width: 500px;
@@ -29,10 +30,7 @@
     .controls-signin {
       margin-top: 20px;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include flexDisplayColumn-1;
 
       button {
         margin-right: 10px;
@@ -41,5 +39,48 @@
     .controls-signin {
       margin-top: 100px;
     }
+  }
+}
+
+.profile-form {
+  margin-top: 20px;
+  text-align: center;
+  @include flexDisplayColumn-1;
+
+  form {
+    .pf-div {
+      margin-top: 170px;
+      label {
+        font-size: 28px;
+      }
+      .group-input {
+        display: flex;
+        flex-direction: row;
+        input {
+          width: 650px;
+        }
+        svg {
+          transform: translateX(-38px);
+        }
+      }
+    }
+
+    .createprofile-controls {
+      transform: translateY(-80px);
+    }
+
+    .input-gender-label,
+    .input-gender-pref-label,
+    .input-sexuality-label {
+      font-size: 28px;
+    }
+  }
+  .border-a {
+    border-color: $theme-primary;
+    fill: $theme-primary; /*svg*/
+  }
+  .border-b {
+    border-color: $theme-secondary;
+    fill: $theme-secondary;
   }
 }
