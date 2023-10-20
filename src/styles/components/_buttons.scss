@@ -55,3 +55,20 @@
   font-size: 16px;
   border: solid 1px black;
 }
+
+.createprofile-controls {
+  button {
+    height: 47px;
+    width: 200px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 22px;
+    border: solid 1px $theme-primary;
+    transition: ease-in-out 0.4s;
+    color: red;
+
+    &:hover {
+      @include hoverOverBtn-3;
+    }
+  }
+}

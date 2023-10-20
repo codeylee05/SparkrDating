@@ -6,7 +6,136 @@
 {% block content %}
 
 <body>
-    Create profile
+    <div class="title-head">
+        Let's setup your Profile
+    </div>
+    <div class="profile-form">
+        <form action="{% url 'createprofile' user_id=request.user.id %}" method="POST">
+            {% csrf_token %}
+            <div class="pf-div d1 active">
+                <label class="form-label input-name-label" for="input-name">What's your name?</label>
+                <div class="group-input">
+                    <input class="form-control input-name border-a" id="input-name" name="name" required>
+                    <div class="svg-cont">
+                        <svg class="border-a s1" xmlns="http://www.w3.org/2000/svg" width="38" height="38"
+                            class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-div d2 inactive">
+                <label class="form-label input-age-label" for="input-age">How old are you?</label>
+                <div class="group-input">
+                    <input class="form-control input-age border-b" id="input-age" name="age" required>
+                    <div class="svg-cont">
+                        <svg class="border-b s2" xmlns="http://www.w3.org/2000/svg" width="38" height="38"
+                            class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-div d3 inactive">
+                <label class="form-label input-gender-label" for="input-gender">What's your gender?</label>
+                <div class="group-input">
+                    <select class="form-select input-gender border-a" id="input-gender" aria-label="Select"
+                        name="gender" required>
+                        <option selected value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                    <div class="svg-cont">
+                        <svg class="border-a s3" xmlns="http://www.w3.org/2000/svg" width="38" height="38"
+                            class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-div d4 inactive">
+                <label class="form-label input-gender-pref-label" for="input-gender-pref">Which gender do you
+                    prefer?</label>
+                <div class="group-input">
+                    <select class="form-select input-gender-pref border-b" id="input-gender-pref" aria-label="Select"
+                        name="preference" required>
+                        <option selected value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="B">Both</option>
+                    </select>
+                    <div class="svg-cont">
+                        <svg class="border-b s4" xmlns="http://www.w3.org/2000/svg" width="38" height="38"
+                            class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-div d5 inactive">
+                <label class="form-label input-location-label" for="input-location">Where are you based?</label>
+                <div class="group-input">
+                    <input class="form-control input-location border-a" id="input-location" name="location" required>
+                    <div class="svg-cont">
+                        <svg class="border-a s5" xmlns="http://www.w3.org/2000/svg" width="38" height="38"
+                            class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-div d6 inactive">
+                <label class="form-label input-sexuality-label" for="input-sexuality">What's your sexuality?</label>
+                <div class="group-input">
+                    <select class="form-select input-sexuality border-b" id="input-sexuality" aria-label="Select"
+                        name="sexuality" required>
+                        <option selected value="NON">Prefer not to say</option>
+                        <option value="HET">Heterosexual</option>
+                        <option value="HOM">Homosexual</option>
+                        <option value="BIS">Bisexual</option>
+                        <option value="PAN">Pansexual</option>
+                        <option value="ASE">Asexual</option>
+                        <option value="DEM">Demisexual</option>
+                        <option value="QUE">Queer</option>
+                        <option value="QUS">Questioning</option>
+                    </select>
+                    <div class="svg-cont">
+                        <svg class="border-b s6" xmlns="http://www.w3.org/2000/svg" width="38" height="38"
+                            class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-div d7 inactive">
+                <label class="form-label input-bio-label" for="input-bio">Write a short sweet bio</label>
+                <div class="group-input">
+                    <input class="form-control input-bio border-a" id="input-bio" name="bio" required>
+                    <div class="svg-cont">
+                        <svg class="border-a s7" xmlns="http://www.w3.org/2000/svg" width="38" height="38"
+                            class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-div d8 createprofile-controls inactive">
+                <button type="submit">Create Profile</button>
+            </div>
+        </form>
+    </div>
 </body>
 
 {% endblock %}

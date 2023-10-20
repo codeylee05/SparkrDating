@@ -3,11 +3,23 @@
 @mixin hoverOverBtn-1 {
   color: white;
   border: solid 1px white;
-  background: $theme-background;
+  background: transparent;
 }
 
 @mixin hoverOverBtn-2 {
   color: $theme-secondary;
   border: solid 1px $theme-secondary;
   background: white;
+}
+
+@mixin hoverOverBtn-3 {
+  color: white;
+  background: $theme-primary;
+}
+
+@mixin flexDisplayColumn-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
