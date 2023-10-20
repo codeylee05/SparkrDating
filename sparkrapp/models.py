@@ -6,7 +6,8 @@ FEMALE = "F"
 BOTH = "B"
 
 HETERO = "HET"
-HOMO = "HOM"
+GAY = "GAY"
+LESB = "LES"
 BI = "BIS"
 PAN = "PAN"
 A = "ASE"
@@ -25,15 +26,16 @@ PREFERENCES = [
     (BOTH, "BOTH")
 ]
 SEXUALITIES = [
-    (HOMO, "HOMOSEXUAL"),
-    (HETERO, "HETEROSEXUAL"),
-    (BI, "BISEXUAL"),
-    (PAN, "PANSEXUAL"),
-    (A, "ASEXUAL"),
-    (DEMI, "DEMISEXUAL"),
-    (QUEER, "QUEER"),
-    (QUEST, "QUESTIONING"),
-    (PNTS, "Prefer not to say")
+    (GAY, "Gay"),
+    (HETERO, "Heterosexual"),
+    (LESB, "Lesbian"),
+    (BI, "Bisexual"),
+    (PAN, "Pansexual"),
+    (A, "Asexual"),
+    (DEMI, "Demisexual"),
+    (QUEER, "Queer"),
+    (QUEST, "Questioning"),
+    (PNTS, "Prefer Not To say")
 ]
 
 
@@ -52,4 +54,4 @@ class Profile(models.Model):
 
     def is_valid_Profile(self):
 
-        return self.user and self.user_name and self.user_gender and self.user_location and self.user_preference and self.user_sexuality and self.user_bio != "" and int(self.user_age) > 0
+        return self.user and self.user_name and self.user_gender and self.user_location and self.user_preference and self.user_sexuality != "" and int(self.user_age) > 0
