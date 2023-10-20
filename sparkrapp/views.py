@@ -6,6 +6,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Profile
 
+invalid_object = "Please respond to all prompts. Try again"
+
+
 def index(request):
 
     return render(request, "sparkrapp/index.html")
@@ -26,7 +29,7 @@ def account(request, user_id):
             "profile": profile
         })
 
-    else: 
+    else:
 
         return render(request, "sparkrapp/signin.html")
 
@@ -46,12 +49,20 @@ def create_profile(request, user_id):
         sexuality = request.POST["sexuality"]
         bio = request.POST["bio"]
 
-        new_profile = Profile.objects.create(user=this_user, user_name=name, user_age=age, user_gender=gender, user_location=location, user_preference=preference, user_sexuality=sexuality, user_bio=bio)
-        new_profile.save()
+        new_profile = Profile(user=this_user, user_name=name, user_age=age, user_gender=gender,
+                              user_location=location, user_preference=preference, user_sexuality=sexuality, user_bio=bio)
 
-        return redirect("account", user_id=this_user.id)
+        if not new_profile.is_valid_Profile():
+
+            return render(request, "sparkrapp/createprofile.html", {
+                "message": invalid_object
+            })
+
+        else:
+
+            new_profile.save()
+            return redirect("account", user_id=this_user.id)
 
     else:
 
         return render(request, "sparkrapp/createprofile.html")
-

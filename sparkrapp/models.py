@@ -20,7 +20,7 @@ GENDERS = [
     (FEMALE, "FEMALE")
 ]
 PREFERENCES = [
-    (MALE, "MALE"), 
+    (MALE, "MALE"),
     (FEMALE, "FEMALE"),
     (BOTH, "BOTH")
 ]
@@ -36,13 +36,20 @@ SEXUALITIES = [
     (PNTS, "Prefer not to say")
 ]
 
+
 class Profile(models.Model):
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_profile", default=1)
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="user_profile", default=1)
     user_name = models.CharField(max_length=32)
     user_age = models.IntegerField()
     user_gender = models.CharField(max_length=1, choices=GENDERS)
     user_location = models.CharField(max_length=32)
     user_preference = models.CharField(max_length=1, choices=PREFERENCES)
-    user_sexuality = models.CharField(max_length=3, choices=SEXUALITIES, default=PNTS)
+    user_sexuality = models.CharField(
+        max_length=3, choices=SEXUALITIES, default=PNTS)
     user_bio = models.TextField(null=True, blank=True)
+
+    def is_valid_Profile(self):
+
+        return self.user and self.user_name and self.user_gender and self.user_location and self.user_preference and self.user_sexuality and self.user_bio != "" and int(self.user_age) > 0

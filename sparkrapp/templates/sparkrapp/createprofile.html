@@ -10,6 +10,11 @@
         Let's setup your Profile
     </div>
     <div class="profile-form">
+        <div class="message-cont">
+            {% if message %}
+            {{ message }}
+            {% endif %}
+        </div>
         <form action="{% url 'createprofile' user_id=request.user.id %}" method="POST">
             {% csrf_token %}
             <div class="pf-div d1 active">

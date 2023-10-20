@@ -1,11 +1,14 @@
 const submitIcons = document.querySelectorAll(".svg-cont");
 
+const messageContainer = document.querySelector(".message-cont")
+
 submitIcons.forEach(submitIcon => {
     submitIcon.addEventListener("click", handleSubmit);
 })
 
 function handleSubmit(event) {
     console.log("handleSubmit triggered")
+    messageContainer.style.display = "None"
 
     const target = event.target
     //console.log(target)

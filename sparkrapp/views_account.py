@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.models import User
 from .models import Profile
 
@@ -38,7 +39,7 @@ def sign_up(request):
         else:
 
             return render(request, "sparkrapp/signup.html", {
-                "message": nonmatching_passwords
+                "message": non_matching_passwords
             })
 
     else:
@@ -47,6 +48,8 @@ def sign_up(request):
 
 
 def sign_in(request):
+
+    this_user = request.user
 
     if request.method == "POST":
 
@@ -57,8 +60,15 @@ def sign_in(request):
         if user is not None:
 
             login(request, user)
-            return redirect("createprofile", user_id=request.user.id)
 
+            try: 
+                user_profile = Profile.objects.get(user=this_user)
+                return redirect("account", user_id=this_user.id)
+
+            except:
+                Profile.DoesNotExist
+                return redirect("createprofile", user_id=this_user.id)
+               
         else:
 
             return render(request, "sparkrapp/signin.html", {
