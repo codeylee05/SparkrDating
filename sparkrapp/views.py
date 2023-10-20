@@ -34,10 +34,24 @@ def account(request, user_id):
 @login_required
 def create_profile(request, user_id):
 
-    #if request.method == "POST":
-    #pass
+    this_user = request.user
 
-    #else:
+    if request.method == "POST":
+
+        name = request.POST["name"]
+        age = request.POST["age"]
+        gender = request.POST["gender"]
+        preference = request.POST["preference"]
+        location = request.POST["location"]
+        sexuality = request.POST["sexuality"]
+        bio = request.POST["bio"]
+
+        new_profile = Profile.objects.create(user=this_user, user_name=name, user_age=age, user_gender=gender, user_location=location, user_preference=preference, user_sexuality=sexuality, user_bio=bio)
+        new_profile.save()
+
+        return redirect("account", user_id=this_user.id)
+
+    else:
 
         return render(request, "sparkrapp/createprofile.html")
 

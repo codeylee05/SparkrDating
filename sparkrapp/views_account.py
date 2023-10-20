@@ -5,9 +5,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Profile
 
-existing_account = "This account already exists. Try signing in"
+existing_account = "This account already exists. Try signing in?"
 non_matching_passwords = "The passwords dont match. Try again"
-non_existing_account = "This account does not exist. Try signing up"
+non_existing_account = "Incorrect email or password. Try signing up?"
 
 
 def sign_up(request):
@@ -58,7 +58,6 @@ def sign_in(request):
 
             login(request, user)
             return redirect("createprofile", user_id=request.user.id)
-            '''return redirect("account", user_id=request.user.id)'''
 
         else:
 
