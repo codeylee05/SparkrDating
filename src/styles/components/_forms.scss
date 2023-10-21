@@ -47,11 +47,16 @@
   text-align: center;
   @include flexDisplayColumn-1;
 
+  .message-cont {
+    font-size: 23px;
+  }
+
   form {
     .pf-div {
       margin-top: 170px;
       label {
         font-size: 28px;
+        text-align: center;
       }
       .group-input {
         display: flex;

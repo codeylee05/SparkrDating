@@ -1,2 +1,58 @@
-@use "../variables"as *;
-@use "../mixins"as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.body-account {
+  .display-email {
+    text-align: center;
+  }
+
+  .account-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .profile-prev-cont {
+      .title-a {
+        color: $theme-secondary;
+        text-align: center;
+      }
+      .profile-cont {
+        width: 310px;
+        height: 495px;
+        border: solid 1px black;
+        border-radius: 15px;
+      }
+    }
+
+    .profile-detail-cont {
+      text-align: center;
+      .title-b {
+        color: $theme-primary;
+      }
+
+      .profile-det-title {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .profile-det {
+        margin-bottom: 20px;
+      }
+
+      .profile-det-bio {
+        width: 320px;
+      }
+
+      .editprofile-controls {
+        position: absolute;
+        right: 190px;
+        bottom: 45px;
+      }
+    }
+
+    .text-seperator {
+      font-size: 35px;
+      font-weight: bold;
+    }
+  }
+}
