@@ -66,3 +66,14 @@ def create_profile(request, user_id):
     else:
 
         return render(request, "sparkrapp/createprofile.html")
+
+
+def edit_profile(request, profile_id):
+
+    profile = Profile.objects.get(id=profile_id)
+    # if request.method == "POST":
+
+    # else:
+    return render(request, "sparkrapp/editprofile.html", {
+        "profile": profile
+    })

@@ -1,0 +1,92 @@
+{% extends 'sparkrapp/base.html' %}
+{% load static %}
+
+<title>{% block title %}Edit Profile - Sparkr{% endblock %}</title>
+
+{% block content %}
+
+<body>
+    <div class="title-head">
+        Edit your profile
+    </div>
+    <div class="profile-form editprofile-form">
+        <form action="{% url 'editprofile' profile_id=profile.id %}" method="POST">
+            {% csrf_token %}
+            <div class="pf-div d1">
+                <label class="form-label input-name-label" for="input-name">Name</label>
+                <div class="group-input">
+                    <input class="form-control input-name border-a" id="input-name" name="name">
+                </div>
+            </div>
+
+            <div class="pf-div d2">
+                <label class="form-label input-age-label" for="input-age">Age</label>
+                <div class="group-input">
+                    <input class="form-control input-age border-b" id="input-age" name="age">
+                </div>
+            </div>
+
+            <div class="pf-div d3">
+                <label class="form-label input-gender-label" for="input-gender">Gender</label>
+                <div class="group-input">
+                    <select class="form-select input-gender border-a" id="input-gender" aria-label="Select"
+                        name="gender">
+                        <option selected value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="pf-div d4">
+                <label class="form-label input-gender-pref-label" for="input-gender-pref">Gender Preference</label>
+                <div class="group-input">
+                    <select class="form-select input-gender-pref border-b" id="input-gender-pref" aria-label="Select"
+                        name="preference">
+                        <option selected value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="B">Both</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="pf-div d5">
+                <label class="form-label input-location-label" for="input-location">Location</label>
+                <div class="group-input">
+                    <input class="form-control input-location border-a" id="input-location" name="location">
+                </div>
+            </div>
+
+            <div class="pf-div d6">
+                <label class="form-label input-sexuality-label" for="input-sexuality">Sexuality</label>
+                <div class="group-input">
+                    <select class="form-select input-sexuality border-b" id="input-sexuality" aria-label="Select"
+                        name="sexuality">
+                        <option selected value="NON">Prefer not to say</option>
+                        <option value="HET">Heterosexual</option>
+                        <option value="GAY">Gay</option>
+                        <option value="LES">Lesbian</option>
+                        <option value="BIS">Bisexual</option>
+                        <option value="PAN">Pansexual</option>
+                        <option value="ASE">Asexual</option>
+                        <option value="DEM">Demisexual</option>
+                        <option value="QUE">Queer</option>
+                        <option value="QUS">Questioning</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="pf-div d7">
+                <label class="form-label input-bio-label" for="input-bio">Bio</label>
+                <div class="group-input">
+                    <input class="form-control input-bio border-a" id="input-bio" name="bio">
+                </div>
+            </div>
+
+            <div class="pf-div d8 saveprofile-control">
+                <button type="submit">Save Profile</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+{% endblock %}
