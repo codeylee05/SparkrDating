@@ -51,6 +51,8 @@ class Profile(models.Model):
     user_sexuality = models.CharField(
         max_length=3, choices=SEXUALITIES, default=PNTS)
     user_bio = models.TextField(null=True, blank=True)
+    user_profile_image = models.ImageField(
+        upload_to="uploads/profile_images/", default="media/defaults/def_prof_image.def_prof_image.jpg", null=False)
 
     def is_valid_Profile(self):
 

@@ -1,4 +1,4 @@
-from .views_account import sign_up, sign_in
+from .views_account import sign_up, sign_in, sign_out
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, logout, authenticate
