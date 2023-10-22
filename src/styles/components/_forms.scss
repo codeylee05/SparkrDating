@@ -95,3 +95,20 @@
     fill: $theme-secondary;
   }
 }
+
+.editprofile-form {
+  form {
+    .pf-div {
+      margin-top: 10px;
+
+      label {
+        font-size: 24px;
+        text-align: center;
+      }
+    }
+
+    .saveprofile-control {
+      margin-top: 30px;
+    }
+  }
+}

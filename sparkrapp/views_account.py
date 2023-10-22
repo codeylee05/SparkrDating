@@ -24,12 +24,13 @@ def sign_up(request):
             users = User.objects.filter(email=email)
             if users:
 
-                 return render(request, "sparkrapp/signup.html", {
+                return render(request, "sparkrapp/signup.html", {
                     "message": existing_account
-                 })
+                })
 
-            else: 
-                new_user = User.objects.create_user(email=email, username=email, password=password1)
+            else:
+                new_user = User.objects.create_user(
+                    email=email, username=email, password=password1)
                 new_user.save()
 
                 return render(request, "sparkrapp/signin.html", {
@@ -61,14 +62,14 @@ def sign_in(request):
 
             login(request, user)
 
-            try: 
+            try:
                 user_profile = Profile.objects.get(user=this_user)
                 return redirect("account", user_id=this_user.id)
 
             except:
                 Profile.DoesNotExist
                 return redirect("createprofile", user_id=this_user.id)
-               
+
         else:
 
             return render(request, "sparkrapp/signin.html", {
@@ -78,3 +79,10 @@ def sign_in(request):
     else:
 
         return render(request, "sparkrapp/signin.html")
+
+
+def sign_out(request):
+
+    logout(request)
+
+    return redirect("index")

@@ -1,4 +1,4 @@
-from .views_account import sign_up, sign_in
+from .views_account import sign_up, sign_in, sign_out
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, logout, authenticate
@@ -66,3 +66,43 @@ def create_profile(request, user_id):
     else:
 
         return render(request, "sparkrapp/createprofile.html")
+
+
+def edit_profile(request, profile_id):
+
+    this_user = request.user
+
+    profile = Profile.objects.get(id=profile_id)
+    new_profile_image = request.FILES.get("user_profile_image")
+    if new_profile_image:
+
+        profile.user_profile_image = new_profile_image
+
+    profile.save()
+
+    if request.method == "POST":
+
+        '''name = request.POST["name"]
+        age = request.POST["age"]
+        gender = request.POST["gender"]
+        preference = request.POST["preference"]
+        location = request.POST["location"]
+        sexuality = request.POST["sexuality"]
+        bio = request.POST["bio"]'''
+
+        instance = Profile.objects.get(id=profile_id)
+
+        for name, value in request.POST.items():
+            if value:
+                if hasattr(instance, name):
+                    setattr(instance, name, value)
+
+        instance.save()
+
+        return redirect("account", user_id=this_user.id)
+
+    else:
+
+        return render(request, "sparkrapp/editprofile.html", {
+            "profile": profile
+        })
