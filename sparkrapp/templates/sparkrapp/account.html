@@ -18,7 +18,20 @@
                 Preview Profile
             </div>
             <div class="profile-cont">
-                .
+                <div class="image-cont">
+                    <img src="{{ profile.user_profile_image.url }}" alt="profile image">
+                </div>
+                <div class="text-cont">
+                    <div class="tc-name">
+                        {{ profile.user_name }}
+                    </div>
+                    <div class="tc-age">
+                        {{ profile.user_age }}
+                    </div>
+                    <div class="tc-location">
+                        {{ profile.user_location}}
+                    </div>
+                </div>
             </div>
         </div>
         <div class="text-seperator">
@@ -38,12 +51,12 @@
                     {% endif %}
                 </div>
             </div>
-            <div>
+            <!--<div>
                 <div class="profile-det-title">Sexuality</div>
                 <div class="profile-det">
                     {{ profile.get_user_sexuality_display }}
                 </div>
-            </div>
+            </div>-->
             <div class="profile-det-title">Looking for</div>
             <div class="profile-det">
                 -
