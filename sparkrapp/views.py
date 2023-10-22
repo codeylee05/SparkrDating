@@ -70,10 +70,39 @@ def create_profile(request, user_id):
 
 def edit_profile(request, profile_id):
 
-    profile = Profile.objects.get(id=profile_id)
-    # if request.method == "POST":
+    this_user = request.user
 
-    # else:
-    return render(request, "sparkrapp/editprofile.html", {
-        "profile": profile
-    })
+    profile = Profile.objects.get(id=profile_id)
+    new_profile_image = request.FILES.get("user_profile_image")
+    if new_profile_image:
+
+        profile.user_profile_image = new_profile_image
+
+    profile.save()
+
+    if request.method == "POST":
+
+        '''name = request.POST["name"]
+        age = request.POST["age"]
+        gender = request.POST["gender"]
+        preference = request.POST["preference"]
+        location = request.POST["location"]
+        sexuality = request.POST["sexuality"]
+        bio = request.POST["bio"]'''
+
+        instance = Profile.objects.get(id=profile_id)
+
+        for name, value in request.POST.items():
+            if value:
+                if hasattr(instance, name):
+                    setattr(instance, name, value)
+
+        instance.save()
+
+        return redirect("account", user_id=this_user.id)
+
+    else:
+
+        return render(request, "sparkrapp/editprofile.html", {
+            "profile": profile
+        })
