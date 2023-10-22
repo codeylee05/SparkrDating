@@ -15,14 +15,16 @@
             <div class="pf-div d1">
                 <label class="form-label input-name-label" for="input-name">Name</label>
                 <div class="group-input">
-                    <input class="form-control input-name border-a" id="input-name" name="name">
+                    <input class="form-control input-name border-a" id="input-name" name="name"
+                        placeholder="{{ profile.user_name }}">
                 </div>
             </div>
 
             <div class="pf-div d2">
                 <label class="form-label input-age-label" for="input-age">Age</label>
                 <div class="group-input">
-                    <input class="form-control input-age border-b" id="input-age" name="age">
+                    <input class="form-control input-age border-b" id="input-age" name="age"
+                        placeholder="{{ profile.user_age }}">
                 </div>
             </div>
 
@@ -42,7 +44,7 @@
                 <div class="group-input">
                     <select class="form-select input-gender-pref border-b" id="input-gender-pref" aria-label="Select"
                         name="preference">
-                        <option selected value="M">Male</option>
+                        <option value="M" selected>Male</option>
                         <option value="F">Female</option>
                         <option value="B">Both</option>
                     </select>
@@ -52,7 +54,8 @@
             <div class="pf-div d5">
                 <label class="form-label input-location-label" for="input-location">Location</label>
                 <div class="group-input">
-                    <input class="form-control input-location border-a" id="input-location" name="location">
+                    <input class="form-control input-location border-a" id="input-location" name="location"
+                        placeholder="{{ profile.user_location }}">
                 </div>
             </div>
 
@@ -78,7 +81,8 @@
             <div class="pf-div d7">
                 <label class="form-label input-bio-label" for="input-bio">Bio</label>
                 <div class="group-input">
-                    <input class="form-control input-bio border-a" id="input-bio" name="bio">
+                    <input class="form-control input-bio border-a" id="input-bio" name="bio"
+                        placeholder="{{ profile.user_bio }}">
                 </div>
             </div>
 
