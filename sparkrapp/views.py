@@ -115,9 +115,8 @@ def explore(request):
     this_user = request.user
     this_user_profile = Profile.objects.get(user=this_user)
     profiles = Profile.objects.all()
-    data = serializers.serialize('json', profiles)
 
     return render(request, "sparkrapp/explore.html", {
         "profile": this_user_profile,
-        "profiles_json": data
+        "profiles": profiles
     })
