@@ -1,4 +1,6 @@
 from .views_account import sign_up, sign_in, sign_out
+from django.core import serializers
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, logout, authenticate
@@ -106,3 +108,15 @@ def edit_profile(request, profile_id):
         return render(request, "sparkrapp/editprofile.html", {
             "profile": profile
         })
+
+
+def explore(request):
+
+    this_user = request.user
+    this_user_profile = Profile.objects.get(user=this_user)
+    profiles = Profile.objects.all()
+
+    return render(request, "sparkrapp/explore.html", {
+        "profile": this_user_profile,
+        "profiles": profiles
+    })

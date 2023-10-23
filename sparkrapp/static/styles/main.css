@@ -1,1 +1,403 @@
-.cta{height:47px;width:200px;border-radius:50px;color:orange;font-weight:bold;font-size:23px;border:none;transition:ease-in-out .4s}.cta:hover{color:#fff;border:solid 1px #fff;background:rgba(0,0,0,0);transform:scale(1.1)}.sign-action{height:40px;width:150px;border-radius:50px;font-weight:bold;font-size:22px;border:none;transition:ease-in-out .4s}.controls-signup .sa-signup{background:radial-gradient(circle at 8% 29%, rgb(255, 255, 0) 0%, rgb(255, 59, 0) 100%);color:#fff}.controls-signup .sa-signup:hover{color:orange;border:solid 1px orange;background:#fff}.controls-signin .sa-signin{color:orange}.controls-signin .sa-signin:hover{color:#fff;border:solid 1px #fff;background:rgba(0,0,0,0)}.clear-btn{height:26px;width:100px;margin-top:10px;font-size:16px;border:solid 1px #000}.createprofile-controls button{height:47px;width:200px;border-radius:50px;font-weight:bold;font-size:22px;border:solid 1px red;transition:ease-in-out .4s;color:red}.createprofile-controls button:hover{color:#fff;background:red}.editprofile-controls button{height:40px;width:150px;border-radius:50px;font-weight:bold;font-size:22px;border:none;background:red;color:#fff;transition:ease-in-out .4s}.editprofile-controls button:hover{color:red;border:solid 1px red;background:#fff}.signout-control button{height:40px;width:150px;border-radius:50px;font-weight:bold;font-size:22px;border:none;background:#000;color:#fff;transition:ease-in-out .4s}.signout-control button:hover{background:#fff;color:#000;border:1px solid #000}.saveprofile-control button{height:40px;width:150px;border-radius:50px;font-weight:bold;font-size:22px;border:none;background:orange;color:#fff;transition:ease-in-out .4s}.saveprofile-control button:hover{color:orange;border:solid 1px orange;background:#fff}.form-cont{width:500px;height:400px;background:#d3d3d3;border-radius:20px;position:absolute;top:130px;left:410px;box-shadow:0 0 5px gray 0 0 10px #000;background:radial-gradient(circle at 8% 29%, rgb(255, 255, 0) 0%, rgb(255, 59, 0) 100%)}.form-cont form{padding:10px;display:flex;flex-direction:column;align-items:center}.form-cont form label{font-size:23px}.form-cont form input{border-radius:11px}.form-cont form .controls-signup,.form-cont form .controls-signin{margin-top:20px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center}.form-cont form .controls-signup button,.form-cont form .controls-signin button{margin-right:10px}.form-cont form .controls-signin{margin-top:100px}.profile-form{margin-top:20px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center}.profile-form .message-cont{font-size:23px}.profile-form form .pf-div{margin-top:170px}.profile-form form .pf-div label{font-size:28px;text-align:center}.profile-form form .pf-div .group-input{display:flex;flex-direction:row}.profile-form form .pf-div .group-input input{width:650px}.profile-form form .pf-div .group-input .svg-cont svg{transform:translateX(-38px)}.profile-form form .pf-div .group-input .svg-cont svg:hover{cursor:pointer}.profile-form form .createprofile-controls{transform:translateY(-80px)}.profile-form form .input-gender-label,.profile-form form .input-gender-pref-label,.profile-form form .input-sexuality-label{font-size:28px}.profile-form .border-a{border-color:red;fill:red}.profile-form .border-b{border-color:orange;fill:orange}.editprofile-form form .pf-div{margin-top:10px}.editprofile-form form .pf-div label{font-size:24px;text-align:center}.editprofile-form form .saveprofile-control{margin-top:30px}.profile-cont{width:310px;height:495px;border-radius:15px;background:rgba(211,211,211,.4);box-shadow:0 0 5px gray,0 0 10px gray}.profile-cont .image-cont{width:100%;height:300px;border-radius:15px}.profile-cont .image-cont img{width:100%;height:100%;border-radius:15px}.profile-cont .text-cont{width:100%;height:195px;font-size:32px;padding:6px}.body-index{position:relative;background:radial-gradient(circle at 8% 29%, rgb(255, 255, 0) 0%, rgb(255, 59, 0) 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;padding-top:130px;text-align:center}.body-index .title{font-size:110px;font-weight:bold}.body-index .slogan{font-size:35px;font-weight:bold;color:red;transform:translateY(-10px)}.body-index .prompt{margin-top:20px;font-size:26px}.body-index .controls-index{margin-top:60px}.body-index .controls-index button{margin-right:15px}.body-account .display-email{text-align:center}.body-account .account-cont{display:flex;flex-direction:row;justify-content:space-around}.body-account .account-cont .profile-prev-cont .title-a{color:orange;text-align:center}.body-account .account-cont .profile-detail-cont{text-align:center}.body-account .account-cont .profile-detail-cont .title-b{color:red}.body-account .account-cont .profile-detail-cont .profile-det-title{font-size:22px;font-weight:bold}.body-account .account-cont .profile-detail-cont .profile-det{margin-bottom:20px}.body-account .account-cont .profile-detail-cont .profile-det-bio{width:320px}.body-account .account-cont .profile-detail-cont .editprofile-controls{position:absolute;right:190px;bottom:45px}.body-account .account-cont .text-seperator{font-size:35px;font-weight:bold}.body-account .signout-control{position:absolute;right:595px;bottom:45px}body{font-size:20px}body .title-head{text-align:center;margin-top:20px;font-size:40px;font-weight:bold}body .title-head-2{font-size:32px;font-weight:bold}.body-signup{background:radial-gradient(circle at 8% 29%, rgb(255, 255, 0) 0%, rgb(255, 59, 0) 100%)}.body-signup .form-cont{background:#fff}.body-signup,.body-signin{text-align:center}.inactive{display:none}.active{display:block}
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
+  \****************************************************************************************************************/
+.cta {
+  height: 47px;
+  width: 200px;
+  border-radius: 50px;
+  color: orange;
+  font-weight: bold;
+  font-size: 23px;
+  border: none;
+  transition: ease-in-out 0.4s;
+}
+.cta:hover {
+  color: white;
+  border: solid 1px white;
+  background: transparent;
+  transform: scale(1.1);
+}
+
+.sign-action {
+  height: 40px;
+  width: 150px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 22px;
+  border: none;
+  transition: ease-in-out 0.4s;
+}
+
+.controls-signup .sa-signup {
+  background: radial-gradient(circle at 8% 29%, rgb(255, 255, 0) 0%, rgb(255, 59, 0) 100%);
+  color: white;
+}
+.controls-signup .sa-signup:hover {
+  color: orange;
+  border: solid 1px orange;
+  background: white;
+}
+
+.controls-signin .sa-signin {
+  color: orange;
+}
+.controls-signin .sa-signin:hover {
+  color: white;
+  border: solid 1px white;
+  background: transparent;
+}
+
+.clear-btn {
+  height: 26px;
+  width: 100px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: solid 1px black;
+}
+
+.createprofile-controls button {
+  height: 47px;
+  width: 200px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 22px;
+  border: solid 1px red;
+  transition: ease-in-out 0.4s;
+  color: red;
+}
+.createprofile-controls button:hover {
+  color: white;
+  background: red;
+}
+
+.editprofile-controls button {
+  height: 40px;
+  width: 150px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 22px;
+  border: none;
+  background: red;
+  color: white;
+  transition: ease-in-out 0.4s;
+}
+.editprofile-controls button:hover {
+  color: red;
+  border: solid 1px red;
+  background: white;
+}
+
+.signout-control button {
+  height: 40px;
+  width: 150px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 22px;
+  border: none;
+  background: black;
+  color: white;
+  transition: ease-in-out 0.4s;
+}
+.signout-control button:hover {
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.saveprofile-control button {
+  height: 40px;
+  width: 150px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 22px;
+  border: none;
+  background: orange;
+  color: white;
+  transition: ease-in-out 0.4s;
+}
+.saveprofile-control button:hover {
+  color: orange;
+  border: solid 1px orange;
+  background: white;
+}
+
+.form-cont {
+  width: 500px;
+  height: 400px;
+  background: lightgray;
+  border-radius: 20px;
+  position: absolute;
+  top: 130px;
+  left: 410px;
+  box-shadow: 0 0 5px gray 0 0 10px black;
+  background: radial-gradient(circle at 8% 29%, rgb(255, 255, 0) 0%, rgb(255, 59, 0) 100%);
+}
+.form-cont form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-cont form label {
+  font-size: 23px;
+}
+.form-cont form input {
+  border-radius: 11px;
+}
+.form-cont form .controls-signup,
+.form-cont form .controls-signin {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-cont form .controls-signup button,
+.form-cont form .controls-signin button {
+  margin-right: 10px;
+}
+.form-cont form .controls-signin {
+  margin-top: 100px;
+}
+
+.profile-form {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile-form .message-cont {
+  font-size: 23px;
+}
+.profile-form form .pf-div {
+  margin-top: 170px;
+}
+.profile-form form .pf-div label {
+  font-size: 28px;
+  text-align: center;
+}
+.profile-form form .pf-div .group-input {
+  display: flex;
+  flex-direction: row;
+}
+.profile-form form .pf-div .group-input input {
+  width: 650px;
+}
+.profile-form form .pf-div .group-input .svg-cont svg {
+  transform: translateX(-38px);
+}
+.profile-form form .pf-div .group-input .svg-cont svg:hover {
+  cursor: pointer;
+}
+.profile-form form .createprofile-controls {
+  transform: translateY(-80px);
+}
+.profile-form form .input-gender-label,
+.profile-form form .input-gender-pref-label,
+.profile-form form .input-sexuality-label {
+  font-size: 28px;
+}
+.profile-form .border-a {
+  border-color: red;
+  fill: red; /*svg*/
+}
+.profile-form .border-b {
+  border-color: orange;
+  fill: orange;
+}
+
+.editprofile-form form .pf-div {
+  margin-top: 10px;
+}
+.editprofile-form form .pf-div label {
+  font-size: 24px;
+  text-align: center;
+}
+.editprofile-form form .saveprofile-control {
+  margin-top: 30px;
+}
+
+.profile-cont {
+  width: 310px;
+  height: 495px;
+  border-radius: 15px;
+<<<<<<< Updated upstream
+  background: rgba(211, 211, 211, 0.4);
+=======
+  background: rgba(211, 211, 211, 0.3);
+>>>>>>> Stashed changes
+  box-shadow: 0 0 5px gray, 0 0 10px gray;
+}
+.profile-cont .image-cont {
+  width: 100%;
+<<<<<<< Updated upstream
+  height: 300px;
+=======
+  height: 345px;
+>>>>>>> Stashed changes
+  border-radius: 15px;
+}
+.profile-cont .image-cont img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+.profile-cont .text-cont {
+  width: 100%;
+<<<<<<< Updated upstream
+  height: 195px;
+=======
+  height: 150px;
+>>>>>>> Stashed changes
+  font-size: 32px;
+  padding: 6px;
+}
+
+<<<<<<< Updated upstream
+=======
+.explore-body .profile-cont {
+  background: white;
+}
+
+>>>>>>> Stashed changes
+.body-index {
+  position: relative;
+  background: radial-gradient(circle at 8% 29%, rgb(255, 255, 0) 0%, rgb(255, 59, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-top: 130px;
+  text-align: center;
+}
+.body-index .title {
+  font-size: 110px;
+  font-weight: bold;
+}
+.body-index .slogan {
+  font-size: 35px;
+  font-weight: bold;
+  color: red;
+  transform: translateY(-10px);
+}
+.body-index .prompt {
+  margin-top: 20px;
+  font-size: 26px;
+}
+.body-index .controls-index {
+  margin-top: 60px;
+}
+.body-index .controls-index button {
+  margin-right: 15px;
+}
+
+<<<<<<< Updated upstream
+=======
+.explore-body {
+  background: radial-gradient(circle at 8% 29%, rgb(255, 255, 0) 0%, rgb(255, 59, 0) 100%);
+}
+.explore-body .explore-cont {
+  position: absolute;
+  top: 55px;
+  left: 474px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.explore-body .explore-cont .object-cont {
+  display: none;
+}
+.explore-body .explore-cont .explore-controls {
+  width: 400px;
+  height: 54px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+}
+
+>>>>>>> Stashed changes
+.body-account .display-email {
+  text-align: center;
+}
+.body-account .account-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.body-account .account-cont .profile-prev-cont .title-a {
+  color: orange;
+  text-align: center;
+}
+.body-account .account-cont .profile-detail-cont {
+  text-align: center;
+}
+.body-account .account-cont .profile-detail-cont .title-b {
+  color: red;
+}
+.body-account .account-cont .profile-detail-cont .profile-det-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+.body-account .account-cont .profile-detail-cont .profile-det {
+  margin-bottom: 20px;
+}
+.body-account .account-cont .profile-detail-cont .profile-det-bio {
+  width: 320px;
+}
+.body-account .account-cont .profile-detail-cont .editprofile-controls {
+  position: absolute;
+  right: 190px;
+  bottom: 45px;
+}
+.body-account .account-cont .text-seperator {
+  font-size: 35px;
+  font-weight: bold;
+}
+.body-account .signout-control {
+  position: absolute;
+  right: 595px;
+  bottom: 45px;
+}
+
+body {
+  font-size: 20px;
+}
+body .title-head {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+body .title-head-2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.body-signup {
+  background: radial-gradient(circle at 8% 29%, rgb(255, 255, 0) 0%, rgb(255, 59, 0) 100%);
+}
+.body-signup .form-cont {
+  background: white;
+}
+
+.body-signup,
+.body-signin {
+  text-align: center;
+}
+
+.inactive {
+  display: none;
+}
+
+.active {
+  display: block;
+}
