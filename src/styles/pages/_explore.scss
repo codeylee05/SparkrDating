@@ -1,2 +1,29 @@
-@use "../variables"as *;
-@use "../mixins"as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.explore-body {
+  background: $theme-background;
+
+  .explore-cont {
+    position: absolute;
+    top: 55px;
+    left: 474px;
+    @include flexDisplayColumn-1;
+
+    .object-cont {
+      display: none;
+    }
+
+    .explore-controls {
+      width: 400px;
+      height: 54px;
+      margin-top: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      background: white;
+      border-radius: 10px;
+    }
+  }
+}

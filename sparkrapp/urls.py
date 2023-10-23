@@ -10,5 +10,6 @@ urlpatterns = [
          views.create_profile, name="createprofile"),
     path("edit-profile/<int:profile_id>",
          views.edit_profile, name="editprofile"),
-    path("sign-out/", views.sign_out, name="signout")
+    path("sign-out/", views.sign_out, name="signout"),
+    path("explore/", views.explore, name="explore")
 ]
