@@ -224,20 +224,12 @@
   width: 310px;
   height: 495px;
   border-radius: 15px;
-<<<<<<< Updated upstream
-  background: rgba(211, 211, 211, 0.4);
-=======
   background: rgba(211, 211, 211, 0.3);
->>>>>>> Stashed changes
   box-shadow: 0 0 5px gray, 0 0 10px gray;
 }
 .profile-cont .image-cont {
   width: 100%;
-<<<<<<< Updated upstream
-  height: 300px;
-=======
   height: 345px;
->>>>>>> Stashed changes
   border-radius: 15px;
 }
 .profile-cont .image-cont img {
@@ -247,22 +239,15 @@
 }
 .profile-cont .text-cont {
   width: 100%;
-<<<<<<< Updated upstream
-  height: 195px;
-=======
   height: 150px;
->>>>>>> Stashed changes
   font-size: 32px;
   padding: 6px;
 }
 
-<<<<<<< Updated upstream
-=======
 .explore-body .profile-cont {
   background: white;
 }
 
->>>>>>> Stashed changes
 .body-index {
   position: relative;
   background: radial-gradient(circle at 8% 29%, rgb(255, 255, 0) 0%, rgb(255, 59, 0) 100%);
@@ -295,8 +280,6 @@
   margin-right: 15px;
 }
 
-<<<<<<< Updated upstream
-=======
 .explore-body {
   background: radial-gradient(circle at 8% 29%, rgb(255, 255, 0) 0%, rgb(255, 59, 0) 100%);
 }
@@ -324,7 +307,6 @@
   border-radius: 10px;
 }
 
->>>>>>> Stashed changes
 .body-account .display-email {
   text-align: center;
 }

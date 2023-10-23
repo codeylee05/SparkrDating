@@ -37,11 +37,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-<<<<<<< Updated upstream
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/index.scss */ \"./src/styles/index.scss\");\n/* harmony import */ var _scripts_create_profile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/create-profile */ \"./src/scripts/create-profile.js\");\n/* harmony import */ var _scripts_create_profile__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scripts_create_profile__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://sparkrdating/./src/index.js?");
-=======
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/index.scss */ \"./src/styles/index.scss\");\n/* harmony import */ var _scripts_create_profile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/create-profile */ \"./src/scripts/create-profile.js\");\n/* harmony import */ var _scripts_create_profile__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scripts_create_profile__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _scripts_explore_profiles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/explore-profiles */ \"./src/scripts/explore-profiles.js\");\n/* harmony import */ var _scripts_explore_profiles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scripts_explore_profiles__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://sparkrdating/./src/index.js?");
->>>>>>> Stashed changes
 
 /***/ }),
 
@@ -53,8 +49,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var loda
 
 eval("const submitIcons = document.querySelectorAll(\".svg-cont\");\r\n\r\nconst messageContainer = document.querySelector(\".message-cont\")\r\n\r\nsubmitIcons.forEach(submitIcon => {\r\n    submitIcon.addEventListener(\"click\", handleSubmit);\r\n})\r\n\r\nfunction handleSubmit(event) {\r\n    console.log(\"handleSubmit triggered\")\r\n    messageContainer.style.display = \"None\"\r\n\r\n    const target = event.target\r\n    //console.log(target)\r\n    const parentTarget = target.parentElement\r\n    // console.log(parentTarget)\r\n    const grandparentTarget = parentTarget.parentElement\r\n    // console.log(grandparentTarget)\r\n    const greatparentTarget = grandparentTarget.parentElement\r\n    //console.log(greatparentTarget)\r\n    const profileFormDiv = greatparentTarget.parentElement\r\n    //console.log(profileFormDiv)\r\n\r\n    profileFormDiv.classList.remove(\"active\")\r\n    profileFormDiv.classList.add(\"inactive\")\r\n\r\n    profileFormDiv.nextElementSibling.classList.remove(\"inactive\")\r\n    profileFormDiv.nextElementSibling.classList.add(\"active\")\r\n\r\n}\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://sparkrdating/./src/scripts/create-profile.js?");
 
-<<<<<<< Updated upstream
-=======
 /***/ }),
 
 /***/ "./src/scripts/explore-profiles.js":
@@ -65,7 +59,6 @@ eval("const submitIcons = document.querySelectorAll(\".svg-cont\");\r\n\r\nconst
 
 eval("\n\n//# sourceURL=webpack://sparkrdating/./src/scripts/explore-profiles.js?");
 
->>>>>>> Stashed changes
 /***/ })
 
 /******/ 	});
